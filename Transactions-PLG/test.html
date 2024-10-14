@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="number" placeholder="Enter first value" id="fno">
+    <input type="number" placeholder="Enter second value" id="sno">
+    <input type="submit" id="submit">
+
+    <script>
+        document.getElementById('submit').addEventListener('click',method);
+        function method()
+        {
+            let fno = parseInt(document.getElementById('fno').value);
+            let sno = parseInt(document.getElementById('sno').value);
+            for(i = fno;i<=sno ;i++)
+            {
+                alert(i);
+            }
+            
+            
+        }
+    </script>
+</body>
+</html>

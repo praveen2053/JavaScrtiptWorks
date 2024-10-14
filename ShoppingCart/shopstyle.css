@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 7px;
+    box-sizing: border-box;
+}
+body {
+    background-color: grey;
+}
+.main {
+    background-color:coral;
+    border: 2px solid;
+    width: 250px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 25px;
+}
+.main p {
+    margin: 0;
+    padding: 0;
+}
+.main img {
+    height: 200px;
+    width: 150px;
+}
+.main button {
+    border-radius: 25px;
+}
+#praveen {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.loading {
+    font-size: 20px;
+    text-align: center;
+}
+.spinner-border {
+    width: 2rem;
+    height: 2rem;
+}
+#cart-items {
+    margin-top: 20px;
+}
