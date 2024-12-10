@@ -9,13 +9,13 @@
             font-family: Arial, sans-serif;
             display: flex;
             flex-direction: column;
-            justify-content: flex-start;
+            justify-content:first baseline;
             align-items: center;
             height: 100vh;
-            margin: 0;
-            background-color: #f8f9fa;
-            background-image: url('https://i.pinimg.com/564x/8f/34/d7/8f34d7a4c3930bfc8ac618a214dbb620.jpg');
-            background-size: cover;
+            width: 100vw;
+            background-color: #232424;
+            /* background-image: url('https://img.freepik.com/free-photo/sunny-urban-landscape_23-2149504789.jpg?t=st=1733835254~exp=1733838854~hmac=587229b6926a6ea254529e633d99c8183bb71ce7ade7a461a93de9e244598cf6&w=360'); */
+            background-size:contain;
             background-repeat: no-repeat;
         }
         .main {
@@ -23,9 +23,13 @@
             margin-top: 30px;
             margin-bottom: 50px;
         }
-        h1 {
-            color: black;
-            font-size: 36px;
+        h2 {
+            color: rgb(183, 174, 174);
+            z-index: 999;
+            stroke: rgb(255, 255, 255);
+            border: 2px solid;
+            padding: 10px;
+            border-radius: 20px;
         }
         .main1 {
             display: flex;
@@ -34,12 +38,11 @@
         }
         a {
             text-decoration: none;
-            color: white;
-            background: linear-gradient(45deg, #007BFF, #0056b3);
+            color: rgb(16, 13, 13);
+            background: linear-gradient(45deg, #39da19, #def014);
             padding: 15px 30px;
             border-radius: 30px;
             transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
-            font-size: 20px;
             box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
         }
         a:hover {
@@ -51,7 +54,7 @@
 </head>
 <body>
     <div class="main">
-        <h1>JAVASCRIPT WORKS</h1>
+        <h2>JAVASCRIPT WORKS</h2>
     </div>
     <div class="main1">
         <a href="./Transactions-PLG/SBI_Bank.html" target="_blank">Bank Transaction</a>
