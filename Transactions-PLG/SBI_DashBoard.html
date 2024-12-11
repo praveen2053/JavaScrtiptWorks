@@ -20,14 +20,15 @@
         }
         .form-container {
             background-image: url('');
-            background-size:cover;
+            background-size: cover;
             border: 1px solid #ced4da;
             border-radius: 5px;
             padding: 20px;
             background-color: #ffffff;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            width: 300px;
-            margin: 55px;
+            width: 100%;
+            max-width: 400px;
+            margin: 10px;
         }
         h3 {
             padding: 10px 0;
@@ -41,12 +42,11 @@
             background-size: cover;
             height: 100vh;
         }
-        .header button
-        {
+        .header button {
             margin-top: 12px;
             margin-left: 12px;
         }
-        .header button a{
+        .header button a {
             text-decoration: none;
             color: white;
         }
@@ -57,60 +57,71 @@
         <button class="btn btn btn-secondary"><a href="SBI_Bank.html">Back to Home page</a></button>
     </div>
 
-<div class="container">
-    <div class="form-container">
-        <form id="loginForm">
-            <h3>Account details</h3>
-            <div class="mb-3">
-                <label for="accountNumber" class="form-label"><strong>Account number: </strong></label>
-                <input type="number" class="form-control" id="accountNumber" required>
+    <div class="container">
+        <div class="row justify-content-center w-100">
+            <!-- Form 1: Account Details -->
+            <div class="col-12 col-md-4">
+                <div class="form-container">
+                    <form id="loginForm">
+                        <h3>Account details</h3>
+                        <div class="mb-3">
+                            <label for="accountNumber" class="form-label"><strong>Account number: </strong></label>
+                            <input type="number" class="form-control" id="accountNumber" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password1" class="form-label"><strong>Password: </strong></label>
+                            <input type="password" class="form-control" id="password1" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary" id="submit1">Submit</button>
+                    </form>
+                </div>
             </div>
-            <div class="mb-3">
-                <label for="password1" class="form-label"><strong>Password: </strong></label>
-                <input type="password" class="form-control" id="password1" required>
-            </div>
-            <button type="submit" class="btn btn-primary" id="submit1">Submit</button>
-        </form>
-    </div>
 
-    <div class="form-container">
-        <form id="creditForm">
-            <h3>Credit details</h3>
-            <div class="mb-3">
-                <label for="accountNumberCredit" class="form-label"><strong>Account Number: </strong></label>
-                <input type="number" class="form-control" id="accountNumberCredit" required>
+            <!-- Form 2: Credit Details -->
+            <div class="col-12 col-md-4">
+                <div class="form-container">
+                    <form id="creditForm">
+                        <h3>Credit details</h3>
+                        <div class="mb-3">
+                            <label for="accountNumberCredit" class="form-label"><strong>Account Number: </strong></label>
+                            <input type="number" class="form-control" id="accountNumberCredit" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="passwordCredit" class="form-label"><strong>Password: </strong></label>
+                            <input type="password" class="form-control" id="passwordCredit" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="creditAmount" class="form-label"><strong>Credit Amount: </strong></label>
+                            <input type="number" class="form-control" id="creditAmount" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary" id="submit2">Submit</button>
+                    </form>
+                </div>
             </div>
-            <div class="mb-3">
-                <label for="passwordCredit" class="form-label"><strong>Password: </strong></label>
-                <input type="password" class="form-control" id="passwordCredit" required>
-            </div>
-            <div class="mb-3">
-                <label for="creditAmount" class="form-label"><strong>Credit Amount: </strong></label>
-                <input type="number" class="form-control" id="creditAmount" required>
-            </div>
-            <button type="submit" class="btn btn-primary" id="submit2">Submit</button>
-        </form>
-    </div>
 
-    <div class="form-container">
-        <form id="debitForm">
-            <h3>Debit details</h3>
-            <div class="mb-3">
-                <label for="accountNumberDebit" class="form-label"><strong>Account Number: </strong></label>
-                <input type="number" class="form-control" id="accountNumberDebit" required>
+            <!-- Form 3: Debit Details -->
+            <div class="col-12 col-md-4">
+                <div class="form-container">
+                    <form id="debitForm">
+                        <h3>Debit details</h3>
+                        <div class="mb-3">
+                            <label for="accountNumberDebit" class="form-label"><strong>Account Number: </strong></label>
+                            <input type="number" class="form-control" id="accountNumberDebit" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="passwordDebit" class="form-label"><strong>Password: </strong></label>
+                            <input type="password" class="form-control" id="passwordDebit" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="debitAmount" class="form-label"><strong>Debit Amount: </strong></label>
+                            <input type="number" class="form-control" id="debitAmount" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary" id="submit3">Submit</button>
+                    </form>
+                </div>
             </div>
-            <div class="mb-3">
-                <label for="passwordDebit" class="form-label"><strong>Password: </strong></label>
-                <input type="password" class="form-control" id="passwordDebit" required>
-            </div>
-            <div class="mb-3">
-                <label for="debitAmount" class="form-label"><strong>Debit Amount: </strong></label>
-                <input type="number" class="form-control" id="debitAmount" required>
-            </div>
-            <button type="submit" class="btn btn-primary" id="submit3">Submit</button>
-        </form>
+        </div>
     </div>
-</div>
 
 <script>
     const validAccountNumber = 123456;
@@ -136,7 +147,7 @@
 
         if (accountNumber === validAccountNumber && password === validPassword) {
             if (creditAmount > 0) {
-                accountBalance += creditAmount;  // Update account balance
+                accountBalance += creditAmount; 
                 alert("Credit successful\nNew balance: " + accountBalance);
             } else {
                 alert("Enter a valid credit amount.");
@@ -154,7 +165,7 @@
 
         if (accountNumber === validAccountNumber && password === validPassword) {
             if (debitAmount > 0 && debitAmount <= accountBalance) {
-                accountBalance -= debitAmount;  // Update account balance
+                accountBalance -= debitAmount; 
                 alert("Debit successful\nNew balance: " + accountBalance);
             } else {
                 alert("Invalid debit amount.");
