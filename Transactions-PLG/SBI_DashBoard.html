@@ -10,16 +10,20 @@
         html, body {
             height: 100%;
             margin: 0;
-            background-color: rgb(52, 52, 165);
+            background-color: #f8f9fa;
+            overflow-y: auto; /* Allow the page to scroll */
         }
+
         .container {
             display: flex;
             justify-content: center;
             align-items: flex-start;
             flex-direction: column;
-            height: 100vh;
             padding-top: 20px;
+            height: 100vh;
+            overflow-y: auto; /* Allow scrolling inside the container */
         }
+
         .form-container {
             background-image: url('');
             background-size: cover;
@@ -31,22 +35,28 @@
             width: 100%;
             max-width: 400px;
             margin: 10px 0;
-            margin-top: 50px;
+            overflow: hidden;
         }
+
         h3 {
             padding: 10px 0;
             text-align: center;
             color: black;
             border-radius: 5px;
         }
+
         body {
-            background-color: rgb(52, 52, 165);
-            height: 100vh;
+            background-image: url('https://i.pinimg.com/564x/dd/a6/9b/dda69b4a544bd19e855f8bdbca689fe8.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100%;
         }
+
         .header button {
             margin-top: 12px;
             margin-left: 12px;
         }
+
         .header button a {
             text-decoration: none;
             color: white;
@@ -54,6 +64,9 @@
     </style>
 </head>
 <body>
+    <div class="header">
+        <button class="btn btn btn-secondary"><a href="SBI_Bank.html">Back to Home page</a></button>
+    </div>
 
     <div class="container">
         <!-- Account Details Form -->
