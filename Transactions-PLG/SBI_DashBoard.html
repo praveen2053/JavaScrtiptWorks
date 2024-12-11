@@ -10,13 +10,15 @@
         html, body {
             height: 100%;
             margin: 0;
-            background-color: #f8f9fa;
+            background-color: rgb(52, 52, 165);
         }
         .container {
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start;
+            flex-direction: column;
             height: 100vh;
+            padding-top: 20px;
         }
         .form-container {
             background-image: url('');
@@ -28,7 +30,8 @@
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             width: 100%;
             max-width: 400px;
-            margin: 10px;
+            margin: 10px 0;
+            margin-top: 50px;
         }
         h3 {
             padding: 10px 0;
@@ -37,9 +40,7 @@
             border-radius: 5px;
         }
         body {
-            background-image: url('https://i.pinimg.com/564x/dd/a6/9b/dda69b4a544bd19e855f8bdbca689fe8.jpg');
-            background-repeat: no-repeat;
-            background-size: cover;
+            background-color: rgb(52, 52, 165);
             height: 100vh;
         }
         .header button {
@@ -53,73 +54,62 @@
     </style>
 </head>
 <body>
-    <div class="header">
-        <button class="btn btn btn-secondary"><a href="SBI_Bank.html">Back to Home page</a></button>
-    </div>
 
     <div class="container">
-        <div class="row justify-content-center w-100">
-            <!-- Form 1: Account Details -->
-            <div class="col-12 col-md-4">
-                <div class="form-container">
-                    <form id="loginForm">
-                        <h3>Account details</h3>
-                        <div class="mb-3">
-                            <label for="accountNumber" class="form-label"><strong>Account number: </strong></label>
-                            <input type="number" class="form-control" id="accountNumber" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="password1" class="form-label"><strong>Password: </strong></label>
-                            <input type="password" class="form-control" id="password1" required>
-                        </div>
-                        <button type="submit" class="btn btn-primary" id="submit1">Submit</button>
-                    </form>
+        <!-- Account Details Form -->
+        <div class="form-container">
+            <form id="loginForm">
+                <h3>Account details</h3>
+                <div class="mb-3">
+                    <label for="accountNumber" class="form-label"><strong>Account number: </strong></label>
+                    <input type="number" class="form-control" id="accountNumber" required>
                 </div>
-            </div>
+                <div class="mb-3">
+                    <label for="password1" class="form-label"><strong>Password: </strong></label>
+                    <input type="password" class="form-control" id="password1" required>
+                </div>
+                <button type="submit" class="btn btn-primary" id="submit1">Submit</button>
+            </form>
+        </div>
 
-            <!-- Form 2: Credit Details -->
-            <div class="col-12 col-md-4">
-                <div class="form-container">
-                    <form id="creditForm">
-                        <h3>Credit details</h3>
-                        <div class="mb-3">
-                            <label for="accountNumberCredit" class="form-label"><strong>Account Number: </strong></label>
-                            <input type="number" class="form-control" id="accountNumberCredit" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="passwordCredit" class="form-label"><strong>Password: </strong></label>
-                            <input type="password" class="form-control" id="passwordCredit" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="creditAmount" class="form-label"><strong>Credit Amount: </strong></label>
-                            <input type="number" class="form-control" id="creditAmount" required>
-                        </div>
-                        <button type="submit" class="btn btn-primary" id="submit2">Submit</button>
-                    </form>
+        <!-- Credit Details Form -->
+        <div class="form-container">
+            <form id="creditForm">
+                <h3>Credit details</h3>
+                <div class="mb-3">
+                    <label for="accountNumberCredit" class="form-label"><strong>Account Number: </strong></label>
+                    <input type="number" class="form-control" id="accountNumberCredit" required>
                 </div>
-            </div>
+                <div class="mb-3">
+                    <label for="passwordCredit" class="form-label"><strong>Password: </strong></label>
+                    <input type="password" class="form-control" id="passwordCredit" required>
+                </div>
+                <div class="mb-3">
+                    <label for="creditAmount" class="form-label"><strong>Credit Amount: </strong></label>
+                    <input type="number" class="form-control" id="creditAmount" required>
+                </div>
+                <button type="submit" class="btn btn-primary" id="submit2">Submit</button>
+            </form>
+        </div>
 
-            <!-- Form 3: Debit Details -->
-            <div class="col-12 col-md-4">
-                <div class="form-container">
-                    <form id="debitForm">
-                        <h3>Debit details</h3>
-                        <div class="mb-3">
-                            <label for="accountNumberDebit" class="form-label"><strong>Account Number: </strong></label>
-                            <input type="number" class="form-control" id="accountNumberDebit" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="passwordDebit" class="form-label"><strong>Password: </strong></label>
-                            <input type="password" class="form-control" id="passwordDebit" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="debitAmount" class="form-label"><strong>Debit Amount: </strong></label>
-                            <input type="number" class="form-control" id="debitAmount" required>
-                        </div>
-                        <button type="submit" class="btn btn-primary" id="submit3">Submit</button>
-                    </form>
+        <!-- Debit Details Form -->
+        <div class="form-container">
+            <form id="debitForm">
+                <h3>Debit details</h3>
+                <div class="mb-3">
+                    <label for="accountNumberDebit" class="form-label"><strong>Account Number: </strong></label>
+                    <input type="number" class="form-control" id="accountNumberDebit" required>
                 </div>
-            </div>
+                <div class="mb-3">
+                    <label for="passwordDebit" class="form-label"><strong>Password: </strong></label>
+                    <input type="password" class="form-control" id="passwordDebit" required>
+                </div>
+                <div class="mb-3">
+                    <label for="debitAmount" class="form-label"><strong>Debit Amount: </strong></label>
+                    <input type="number" class="form-control" id="debitAmount" required>
+                </div>
+                <button type="submit" class="btn btn-primary" id="submit3">Submit</button>
+            </form>
         </div>
     </div>
 
@@ -147,7 +137,7 @@
 
         if (accountNumber === validAccountNumber && password === validPassword) {
             if (creditAmount > 0) {
-                accountBalance += creditAmount; 
+                accountBalance += creditAmount;  // Update account balance
                 alert("Credit successful\nNew balance: " + accountBalance);
             } else {
                 alert("Enter a valid credit amount.");
@@ -165,7 +155,7 @@
 
         if (accountNumber === validAccountNumber && password === validPassword) {
             if (debitAmount > 0 && debitAmount <= accountBalance) {
-                accountBalance -= debitAmount; 
+                accountBalance -= debitAmount;  // Update account balance
                 alert("Debit successful\nNew balance: " + accountBalance);
             } else {
                 alert("Invalid debit amount.");
